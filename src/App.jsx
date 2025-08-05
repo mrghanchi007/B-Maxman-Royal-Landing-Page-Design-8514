@@ -5,6 +5,7 @@ import SafeIcon from './common/SafeIcon';
 import './App.css';
 import { englishContent, urduContent } from './translations';
 import CookieConsent from './components/CookieConsent';
+import Footer from './components/Footer';
 
 // Lazy-loaded components
 const TestimonialSlider = lazy(() => import('./components/TestimonialSlider'));
@@ -147,7 +148,8 @@ Please confirm my order. Thank you!`;
   };
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-red-50 via-white to-red-50 ${shouldShowInUrdu('all') ? 'font-urdu' : ''}`}>
+    <div className={`min-h-screen flex flex-col bg-gradient-to-br from-red-50 via-white to-red-50 ${shouldShowInUrdu('all') ? 'font-urdu' : ''}`}>
+      <div className="flex-grow">
       {/* Header - Updated to white and auto-hide on scroll down */}
       <motion.header 
         className={`bg-white text-red-600 py-3 sticky top-0 z-50 shadow-lg transition-transform duration-300 ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
@@ -158,7 +160,7 @@ Please confirm my order. Thank you!`;
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center">
             <img 
-              src="https://i.ibb.co/N2frfSL/Logo.png" 
+              src="https://i.ibb.co/N2frfSLm/Logo.png" 
               alt="B-Maxman Logo" 
               className="h-10 w-auto rounded" 
               width="40" 
@@ -277,43 +279,15 @@ Please confirm my order. Thank you!`;
                   
                   {/* Main content card */}
                   <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 shadow-xl">
-                    <div className="text-center mb-6">
-                      <h3 className="text-2xl font-bold mb-2">Royal Special Formula</h3>
-                      <div className="w-24 h-1 bg-yellow-400 mx-auto"></div>
+                    {/* Product Image */}
+                    <div className="flex justify-center">
+                      <img 
+                        src="https://i.ibb.co/bMgSrnM4/B-Maxman-Royal-Special-Treatment-1.png" 
+                        alt="B-Maxman Royal Special Treatment"
+                        className="max-w-full h-auto rounded-lg shadow-xl"
+                        loading="eager"
+                      />
                     </div>
-                    
-                    {/* Feature highlights */}
-                    <div className="space-y-4">
-                      {[
-                        "100% Natural Herbal Formula",
-                        "15+ Premium Ingredients",
-                        "Clinically Tested & Safe",
-                        "Trusted by 50,000+ Men",
-                        "30-Day Satisfaction Guarantee"
-                      ].map((feature, idx) => (
-                        <motion.div 
-                          key={idx}
-                          className="flex items-center space-x-3"
-                          initial={{ opacity: 0, x: 20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: idx * 0.1 + 0.5 }}
-                        >
-                          <div className="bg-green-500 p-1 rounded-full">
-                            <SafeIcon icon={FiCheck} className="text-white" />
-                          </div>
-                          <span>{feature}</span>
-                        </motion.div>
-                      ))}
-                    </div>
-                    
-                    {/* Animated seal */}
-                    <motion.div 
-                      className="mt-8 bg-yellow-400 text-red-800 w-32 h-32 rounded-full flex items-center justify-center text-center p-4 font-bold mx-auto border-4 border-white"
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    >
-                      PREMIUM QUALITY GUARANTEED
-                    </motion.div>
                   </div>
                 </div>
               </div>
@@ -543,15 +517,12 @@ Please confirm my order. Thank you!`;
 
             {/* 2 Month Pack */}
             <motion.div 
-              className="bg-white rounded-xl shadow-xl overflow-hidden border border-red-100 hover:shadow-2xl transition-shadow transform md:-translate-y-4"
+              className="bg-white rounded-xl shadow-xl overflow-hidden border border-red-100 hover:shadow-2xl transition-shadow"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <div className="bg-red-700 p-4 text-white text-center relative overflow-hidden">
-                <div className="absolute top-0 right-0 bg-yellow-400 text-red-800 text-xs font-bold px-2 py-1 transform rotate-0 translate-x-0 -translate-y-0">
-                  {content.pricing.popular}
-                </div>
                 <h3 className="text-xl font-bold">{content.pricing.packages[1].title}</h3>
               </div>
               <div className="p-6 text-center">
@@ -574,14 +545,17 @@ Please confirm my order. Thank you!`;
               </div>
             </motion.div>
 
-            {/* 3 Month Pack */}
+            {/* 3 Month Complete Course */}
             <motion.div 
-              className="bg-white rounded-xl shadow-xl overflow-hidden border border-red-100 hover:shadow-2xl transition-shadow"
+              className="bg-white rounded-xl shadow-xl overflow-hidden border border-red-100 hover:shadow-2xl transition-shadow transform md:-translate-y-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <div className="bg-red-600 p-4 text-white text-center">
+              <div className="bg-red-700 p-4 text-white text-center relative overflow-hidden">
+                <div className="absolute top-0 right-0 bg-yellow-400 text-red-800 text-xs font-bold px-2 py-1 transform rotate-0 translate-x-0 -translate-y-0">
+                  {content.pricing.popular}
+                </div>
                 <h3 className="text-xl font-bold">{content.pricing.packages[2].title}</h3>
               </div>
               <div className="p-6 text-center">
@@ -717,44 +691,10 @@ Please confirm my order. Thank you!`;
           </motion.div>
         </div>
       </section>
-
-      {/* Footer - Updated to keep company name in English */}
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <div className="mb-4">
-            <img 
-              src="https://i.ibb.co/5hQVVLg/Logo-1.png" 
-              alt="The Planner Herbal International"
-              className="h-12 mx-auto mb-2"
-              width="120"
-              height="48"
-              loading="lazy"
-            />
-            <h3 className="text-xl">The Planner Herbal International (TPH Int.)</h3>
-          </div>
-          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
-            <a 
-              href="tel:923328888935" 
-              className="flex items-center space-x-2 text-lg hover:text-yellow-400 transition-colors"
-            >
-              <SafeIcon icon={FiPhone} />
-              <span>📞 0332-8888935</span>
-            </a>
-            <a 
-              href="https://www.tphint.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-lg hover:text-yellow-400 transition-colors"
-            >
-              🌐 www.tphint.com
-            </a>
-          </div>
-          <p className="mt-4 text-gray-400">
-            © 2024 B-Maxman Royal Special Treatment. {content.footer.rights}
-          </p>
-        </div>
-      </footer>
-
+      
+      {/* Footer */}
+      <Footer />
+    </div>
       {/* Back to Top Button */}
       <AnimatePresence>
         {showScrollTop && (

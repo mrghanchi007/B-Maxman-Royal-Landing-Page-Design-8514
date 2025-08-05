@@ -41,7 +41,7 @@ const VideoSection = ({ videoId }) => {
                 className="absolute top-0 left-0 w-full h-full bg-black/50 rounded-xl flex flex-col items-center justify-center cursor-pointer"
                 onClick={handleLoadVideo}
                 style={{
-                  backgroundImage: `url(https://i.ibb.co/XfW8gKy/B-Maxman-Royal-Special-Treatment.png)`,
+                  backgroundImage: `url(https://i.ibb.co/XfW8gKyy/B-Maxman-Royal-Special-Treatment.png)`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
