@@ -92,7 +92,7 @@ export const englishContent = {
           "Free Delivery",
           "Cash on Delivery",
           "24/7 Customer Support",
-          "Save Rs 100"
+          "Save Rs 500"
         ]
       },
       {
@@ -102,7 +102,7 @@ export const englishContent = {
           "Free Delivery",
           "Cash on Delivery",
           "24/7 Customer Support",
-          "Save Rs 900",
+          "<strong>Save Rs 1500</strong>",
           "Best Value"
         ]
       }
@@ -120,7 +120,7 @@ export const englishContent = {
     cityPlaceholder: "Enter your city",
     quantity: "Quantity",
     quantityOptions: [
-      "1 Bottle - Rs 2,300",
+      "1 Bottle - Rs 2,500",
       "2 Bottles - Rs 4,500",
       "3 Bottles - Rs 6,000"
     ],

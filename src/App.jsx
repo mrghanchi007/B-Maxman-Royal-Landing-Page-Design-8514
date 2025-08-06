@@ -97,10 +97,10 @@ Please confirm my order. Thank you!`;
 
   const calculatePrice = (quantity) => {
     const qty = parseInt(quantity);
-    if (qty === 1) return 2300;
+    if (qty === 1) return 2500;
     if (qty === 2) return 4500;
     if (qty === 3) return 6000;
-    return qty * 2300; // fallback for other quantities
+    return qty * 2500; // fallback for other quantities
   };
 
   const toggleLanguage = () => {
@@ -227,7 +227,7 @@ Please confirm my order. Thank you!`;
                 transition={{ duration: 0.2 }}
               >
                 <p className="text-2xl md:text-3xl font-bold text-yellow-400 mb-2">
-                  {content.hero.specialPrice}: Rs 2,300/-
+                  {content.hero.specialPrice}: Rs 2,500/-
                 </p>
                 <p className="text-red-100">{content.hero.delivery}</p>
                 <motion.button
@@ -502,13 +502,13 @@ Please confirm my order. Thank you!`;
               </div>
               <div className="p-6 text-center">
                 <div className="text-4xl font-bold text-gray-800 mb-4">
-                  Rs 2,300<span className="text-lg text-gray-500">/-</span>
+                  Rs 2,500<span className="text-lg text-gray-500">/-</span>
                 </div>
                 <ul className="mb-6 text-left space-y-2">
                   {content.pricing.packages[0].features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
                       <SafeIcon icon={FiCheck} className="text-green-500 mt-1 mr-2 flex-shrink-0" />
-                      <span>{feature}</span>
+                      <span dangerouslySetInnerHTML={{ __html: feature }} />
                     </li>
                   ))}
                 </ul>
@@ -531,14 +531,14 @@ Please confirm my order. Thank you!`;
                     Rs 4,500<span className="text-lg text-gray-500">/-</span>
                   </div>
                   <div className="ml-2 text-sm bg-green-100 text-green-800 px-2 py-1 rounded">
-                    {content.pricing.save} 100
+                    {content.pricing.save} 500
                   </div>
                 </div>
                 <ul className="mb-6 text-left space-y-2">
                   {content.pricing.packages[1].features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
                       <SafeIcon icon={FiCheck} className="text-green-500 mt-1 mr-2 flex-shrink-0" />
-                      <span>{feature}</span>
+                      <span dangerouslySetInnerHTML={{ __html: feature }} />
                     </li>
                   ))}
                 </ul>
@@ -564,14 +564,14 @@ Please confirm my order. Thank you!`;
                     Rs 6,000<span className="text-lg text-gray-500">/-</span>
                   </div>
                   <div className="ml-2 text-sm bg-green-100 text-green-800 px-2 py-1 rounded">
-                    {content.pricing.save} 900
+                    {content.pricing.save} 1,500
                   </div>
                 </div>
                 <ul className="mb-6 text-left space-y-2">
                   {content.pricing.packages[2].features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
                       <SafeIcon icon={FiCheck} className="text-green-500 mt-1 mr-2 flex-shrink-0" />
-                      <span>{feature}</span>
+                      <span dangerouslySetInnerHTML={{ __html: feature }} />
                     </li>
                   ))}
                 </ul>
