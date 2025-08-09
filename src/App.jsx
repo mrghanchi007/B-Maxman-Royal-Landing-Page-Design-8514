@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 const TestimonialSlider = lazy(() => import('./components/TestimonialSlider'));
 const BeforeAfterSlider = lazy(() => import('./components/BeforeAfterSlider'));
 const VideoSection = lazy(() => import('./components/VideoSection'));
+const HerbalPowerSection = lazy(() => import('./components/HerbalPowerSection'));
 
 const { FiPhone, FiShoppingCart, FiCheck, FiStar, FiShield, FiTruck, FiClock, FiHeart, FiZap, FiAward, FiGlobe, FiChevronUp } = FiIcons;
 
@@ -361,71 +362,67 @@ Please confirm my order. Thank you!`;
         </div>
       </section>
 
-      {/* Ingredients Section */}
-      <section 
-        className={`py-12 md:py-16 bg-white ${shouldShowInUrdu('ingredients') ? 'font-urdu' : ''}`}
-        dir={shouldShowInUrdu('ingredients') ? 'rtl' : 'ltr'}
-      >
-        <div className="container mx-auto px-4">
-          <motion.div className="text-center mb-12" {...fadeInUp}>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              {content.ingredients.title}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {content.ingredients.subtitle}
-            </p>
-          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {content.ingredients.list.map((ingredient, index) => (
-              <motion.div 
-                key={index}
-                className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg shadow-lg"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <h3 className="text-lg font-bold text-green-800 mb-2">{ingredient.name}</h3>
-                <p className="text-green-700">{ingredient.benefit}</p>
-              </motion.div>
-            ))}
-          </div>
 
-          <motion.div 
-            className="text-center mt-8 bg-green-100 p-6 rounded-lg"
-            {...fadeInUp}
-          >
-            <p className="text-xl font-bold text-green-800">{content.ingredients.natural}</p>
-          </motion.div>
-        </div>
-      </section>
+      {/* Herbal Power Section - Lazy Loaded */}
+      <Suspense fallback={<LoadingFallback />}>
+        <HerbalPowerSection language={language} />
+      </Suspense>
 
       {/* Benefits Section */}
       <section 
         className={`py-12 md:py-16 bg-gradient-to-r from-blue-50 to-indigo-50 ${shouldShowInUrdu('benefits') ? 'font-urdu' : ''}`}
         dir={shouldShowInUrdu('benefits') ? 'rtl' : 'ltr'}
+        aria-labelledby="benefits-section"
+        role="region"
       >
         <div className="container mx-auto px-4">
           <motion.div className="text-center mb-12" {...fadeInUp}>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            <h2 
+              className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+              id="benefits-section"
+              title={language === 'en' ? "Expected results from B-Maxman Royal herbal supplement for men" : "بی میکس مین رائل جڑی بوٹیوں کے سپلیمنٹ سے متوقع نتائج"}
+            >
               {content.benefits.title}
             </h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {content.benefits.list.map((benefit, index) => (
-              <motion.div 
+              <motion.article 
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-lg"
+                className="bg-white p-6 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                role="article"
+                aria-labelledby={`benefit-${index}`}
               >
+                {/* Image */}
+                <div className="mb-4 rounded-lg overflow-hidden">
+                  <img
+                    src={benefit.image}
+                    alt={benefit.alt || (typeof benefit === 'string' ? benefit : benefit.text)}
+                    title={benefit.title || (typeof benefit === 'string' ? benefit : benefit.text)}
+                    className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    width="400"
+                    height="192"
+                  />
+                </div>
+                
+                {/* Text Content */}
                 <div className={`flex items-start ${shouldShowInUrdu('benefits') ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
                   <SafeIcon icon={FiCheck} className="text-green-500 text-xl mt-1 flex-shrink-0" />
-                  <p className="font-semibold text-gray-800">{benefit}</p>
+                  <h3 
+                    id={`benefit-${index}`}
+                    className="font-semibold text-gray-800"
+                    title={benefit.seoDescription || (typeof benefit === 'string' ? benefit : benefit.text)}
+                  >
+                    {typeof benefit === 'string' ? benefit : benefit.text}
+                  </h3>
                 </div>
-              </motion.div>
+              </motion.article>
             ))}
           </div>
         </div>

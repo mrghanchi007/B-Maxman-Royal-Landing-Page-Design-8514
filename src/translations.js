@@ -43,12 +43,48 @@ export const englishContent = {
   benefits: {
     title: "📊 Results You Can Expect",
     list: [
-      "Boost testosterone & stamina naturally",
-      "Improved erections & sexual performance", 
-      "Balanced hormones & better mood",
-      "Decreased stress & anxiety",
-      "Higher sperm count & improved fertility",
-      "Enhanced confidence & energy"
+      {
+        text: "Boost testosterone & stamina naturally",
+        image: "/images/Boost testosterone & stamina naturally.jpg",
+        alt: "Natural testosterone booster supplement for men showing increased stamina and energy levels",
+        title: "Boost Testosterone & Stamina Naturally - B-Maxman Royal Herbal Supplement",
+        seoDescription: "Natural herbal formula that boosts testosterone levels and enhances stamina for improved male vitality and performance"
+      },
+      {
+        text: "Improved erections & sexual performance",
+        image: "/images/Improved erections & sexual performance.jpg",
+        alt: "Male enhancement supplement for better erections and improved sexual performance",
+        title: "Improved Erections & Sexual Performance - Natural Male Enhancement",
+        seoDescription: "Herbal supplement that naturally improves erectile function and enhances sexual performance for men"
+      },
+      {
+        text: "Balanced hormones & better mood",
+        image: "/images/Balanced hormones & better mood.jpg",
+        alt: "Hormone balancing supplement for men showing improved mood and emotional well-being",
+        title: "Balanced Hormones & Better Mood - Natural Hormone Support for Men",
+        seoDescription: "Natural herbal formula that helps balance male hormones and improves mood and emotional stability"
+      },
+      {
+        text: "Decreased stress & anxiety",
+        image: "/images/Decreased stress & anxiety.jpg",
+        alt: "Stress relief supplement for men showing reduced anxiety and improved mental health",
+        title: "Decreased Stress & Anxiety - Natural Stress Relief for Men",
+        seoDescription: "Adaptogenic herbs that naturally reduce stress and anxiety while promoting mental clarity and calmness"
+      },
+      {
+        text: "Higher sperm count & improved fertility",
+        image: "/images/Higher sperm count & improved fertility.jpg",
+        alt: "Male fertility supplement showing increased sperm count and improved reproductive health",
+        title: "Higher Sperm Count & Improved Fertility - Natural Male Fertility Support",
+        seoDescription: "Natural herbal supplement that enhances male fertility by increasing sperm count and improving reproductive health"
+      },
+      {
+        text: "Enhanced confidence & energy",
+        image: "/images/Enhanced confidence & energy.jpg",
+        alt: "Energy booster supplement for men showing increased confidence and vitality",
+        title: "Enhanced Confidence & Energy - Natural Energy Booster for Men",
+        seoDescription: "Herbal energy supplement that boosts confidence, increases energy levels and enhances overall male vitality"
+      }
     ]
   },
   testimonials: {
@@ -166,12 +202,48 @@ export const urduContent = {
   benefits: {
     title: "📊 جن نتائج کی آپ توقع کر سکتے ہیں",
     list: [
-      "قدرتی طور پر ٹیسٹوسٹیرون اور استقامت میں اضافہ",
-      "بہتر استحکام اور جنسی کارکردگی",
-      "متوازن ہارمونز اور بہتر مزاج",
-      "تناؤ اور اضطراب میں کمی",
-      "تولیدی صلاحیت میں اضافہ",
-      "اعتماد اور توانائی میں اضافہ"
+      {
+        text: "قدرتی طور پر ٹیسٹوسٹیرون اور استقامت میں اضافہ",
+        image: "/images/Boost testosterone & stamina naturally.jpg",
+        alt: "مردوں کے لیے قدرتی ٹیسٹوسٹیرون بوسٹر سپلیمنٹ جو استقامت اور توانائی میں اضافہ کرتا ہے",
+        title: "قدرتی طور پر ٹیسٹوسٹیرون اور استقامت میں اضافہ - بی میکس مین رائل جڑی بوٹیوں کا سپلیمنٹ",
+        seoDescription: "قدرتی جڑی بوٹیوں کا فارمولا جو ٹیسٹوسٹیرون کی سطح بڑھاتا ہے اور مردانہ طاقت کے لیے استقامت بہتر بناتا ہے"
+      },
+      {
+        text: "بہتر استحکام اور جنسی کارکردگی",
+        image: "/images/Improved erections & sexual performance.jpg",
+        alt: "بہتر استحکام اور جنسی کارکردگی کے لیے قدرتی مردانہ سپلیمنٹ",
+        title: "بہتر استحکام اور جنسی کارکردگی - قدرتی مردانہ بہتری",
+        seoDescription: "جڑی بوٹیوں کا سپلیمنٹ جو قدرتی طور پر مردانہ استحکام اور جنسی کارکردگی کو بہتر بناتا ہے"
+      },
+      {
+        text: "متوازن ہارمونز اور بہتر مزاج",
+        image: "/images/Balanced hormones & better mood.jpg",
+        alt: "مردوں کے لیے ہارمون متوازن کرنے والا سپلیمنٹ جو مزاج اور جذباتی صحت بہتر بناتا ہے",
+        title: "متوازن ہارمونز اور بہتر مزاج - مردوں کے لیے قدرتی ہارمون سپورٹ",
+        seoDescription: "قدرتی جڑی بوٹیوں کا فارمولا جو مردانہ ہارمونز کو متوازن کرتا ہے اور مزاج و جذباتی استحکام بہتر بناتا ہے"
+      },
+      {
+        text: "تناؤ اور اضطراب میں کمی",
+        image: "/images/Decreased stress & anxiety.jpg",
+        alt: "مردوں کے لیے تناؤ کم کرنے والا سپلیمنٹ جو اضطراب کم کرتا ہے اور ذہنی صحت بہتر بناتا ہے",
+        title: "تناؤ اور اضطراب میں کمی - مردوں کے لیے قدرتی تناؤ کا علاج",
+        seoDescription: "موافقت پذیر جڑی بوٹیاں جو قدرتی طور پر تناؤ اور اضطراب کم کرتی ہیں اور ذہنی وضاحت فراہم کرتی ہیں"
+      },
+      {
+        text: "تولیدی صلاحیت میں اضافہ",
+        image: "/images/Higher sperm count & improved fertility.jpg",
+        alt: "مردانہ زرخیزی کا سپلیمنٹ جو سپرم کاؤنٹ بڑھاتا ہے اور تولیدی صحت بہتر بناتا ہے",
+        title: "تولیدی صلاحیت میں اضافہ - قدرتی مردانہ زرخیزی کی سپورٹ",
+        seoDescription: "قدرتی جڑی بوٹیوں کا سپلیمنٹ جو سپرم کاؤنٹ بڑھا کر مردانہ زرخیزی اور تولیدی صحت بہتر بناتا ہے"
+      },
+      {
+        text: "اعتماد اور توانائی میں اضافہ",
+        image: "/images/Enhanced confidence & energy.jpg",
+        alt: "مردوں کے لیے توانائی بڑھانے والا سپلیمنٹ جو اعتماد اور طاقت میں اضافہ کرتا ہے",
+        title: "اعتماد اور توانائی میں اضافہ - مردوں کے لیے قدرتی توانائی بوسٹر",
+        seoDescription: "جڑی بوٹیوں کا توانائی سپلیمنٹ جو اعتماد بڑھاتا ہے، توانائی کی سطح بہتر بناتا ہے اور مجموعی مردانہ طاقت بڑھاتا ہے"
+      }
     ]
   },
   usage: {
