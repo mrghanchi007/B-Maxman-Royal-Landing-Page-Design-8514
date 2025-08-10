@@ -5,11 +5,11 @@ const HerbalPowerSection = ({ language = 'en' }) => {
   const herbalIngredients = {
     en: [
       {
-        name: "Tongkat Ali",
+        name: "Sarffron",
         description: "Natural testosterone booster",
-        image: "/images/Tongkat Ali.png",
-        alt: "Tongkat Ali herbal supplement for natural testosterone boosting and male vitality",
-        seoDescription: "Premium Tongkat Ali extract known for boosting natural testosterone levels and enhancing male performance"
+        image: "/images/Sarffron.png",
+        alt: "Sarffron herbal supplement for natural testosterone boosting and male vitality",
+        seoDescription: "Premium Sarffron extract known for boosting natural testosterone levels and enhancing male performance"
       },
       {
         name: "Maca Root",
@@ -49,11 +49,11 @@ const HerbalPowerSection = ({ language = 'en' }) => {
     ],
     ur: [
       {
-        name: "ٹونگکیٹ علی",
+        name: "سرفرون",
         description: "قدرتی ٹیسٹوسٹیرون بوسٹر",
-        image: "/images/Tongkat Ali.png",
-        alt: "Tongkat Ali herbal supplement for natural testosterone boosting and male vitality",
-        seoDescription: "Premium Tongkat Ali extract known for boosting natural testosterone levels and enhancing male performance"
+        image: "/images/Sarffron.png",
+        alt: "Sarffron herbal supplement for natural testosterone boosting and male vitality",
+        seoDescription: "Premium Sarffron extract known for boosting natural testosterone levels and enhancing male performance"
       },
       {
         name: "ماکا روٹ",
@@ -96,7 +96,7 @@ const HerbalPowerSection = ({ language = 'en' }) => {
   const content = {
     en: {
       title: "🌿 Herbal Power. Backed by Science.",
-      subtitle: "A potent blend of 15+ world-renowned herbal ingredients, trusted for centuries",
+      subtitle: "A potent blend of 30+ world-renowned herbal ingredients, trusted for centuries",
       natural: "🌿 100% Natural • ⚗️ Scientifically Proven • 🛡️ Safe & Effective",
       quality: "Each ingredient is carefully selected and tested for maximum potency"
     },

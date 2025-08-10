@@ -15,14 +15,14 @@ const BeforeAfterSlider = () => {
   const beforeAfterSets = [
     {
       id: 1,
-      before: "https://i.ibb.co/wFFFLcpm/4-weeks-of-use-before.jpg",
-      after: "https://i.ibb.co/KcKvXs0Y/4-weeks-of-use-after.jpg",
+      before: "https://i.ibb.co/jkL8jMSD/4-weeks-of-use-before.png",
+      after: "https://i.ibb.co/wZv0HbkQ/4-weeks-of-use-after.png",
       duration: 4
     },
     {
       id: 2,
-      before: "https://i.ibb.co/fhmttH3/8-weeks-of-use-before.jpg",
-      after: "https://i.ibb.co/Y4PTwDDY/8-weeks-of-use-after.jpg",
+      before: "https://i.ibb.co/mF5hBPvS/8-weeks-of-use-before.png",
+      after: "https://i.ibb.co/hFNk6zTv/8-weeks-of-use-after.png",
       duration: 8
     }
   ];
